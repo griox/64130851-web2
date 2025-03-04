@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyProfile</title>
+</head>
+<body>
+<h1> Thông tin của tôi</h1>
+<ul>
+  <li th:each="info:${MyProfile}">
+    <span th:text="*{info.key}"></span>:<span th:text="*{info.value}"></span>
+  </li>
+</ul>
+</body>
+</html>
