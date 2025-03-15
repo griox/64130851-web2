@@ -1,6 +1,6 @@
 package huyquangngo.Controller;
 
-import ngoquanghuy.MyProfile.Infor;
+import huyquangngo.models.Infor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

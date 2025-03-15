@@ -1,4 +1,4 @@
-package ngoquanghuy.MyProfile;
+package huyquangngo.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 @Data
