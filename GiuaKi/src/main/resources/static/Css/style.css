@@ -20,18 +20,18 @@ body {
 
 /* Banner Navigation */
 .banner {
-
+    background-color: #343a40;;
     padding: 15px 0;
 }
 
 .banner .nav-link {
-    color: black;
+    color: white;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .banner .nav-link:hover {
-    color: #ffeb3b;
+    color: #a5a543;
 }
 
 /* Footer */
@@ -40,4 +40,8 @@ footer {
     color: white;
     padding: 15px;
     text-align: center;
+}
+.img{
+    position: fixed;
+    width: 50%;
 }
