@@ -9,14 +9,12 @@
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
+<div th:replace="fragments/banner"></div>
 <div class="container mt-5">
     <div class="card shadow-lg p-4 bg-light rounded">
         <h2 class="text-center text-primary">About Me</h2>
         <div class="row mt-4">
-            <div class="col-md-4 text-center">
-                <img src="/images/profile.png" alt="Profile Picture" class="img-fluid rounded-circle" width="150">
-            </div>
-            <div class="col-md-8">
+            <div class="col-md-8 center">
                 <ul class="list-group">
                     <li class="list-group-item"><strong>MSSV:</strong> <span th:text="${MSSV}"></span></li>
                     <li class="list-group-item"><strong>Họ Tên:</strong> <span th:text="${hoTen}"></span></li>

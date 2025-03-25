@@ -9,6 +9,7 @@
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
+<div th:replace="fragments/banner"></div>
 <div class="container mt-4">
     <h2 class="text-center">Student List</h2>
     <table class="table table-bordered table-striped">
@@ -22,10 +23,10 @@
         </thead>
         <tbody>
         <tr th:each="student : ${myList}">
-            <td th:text="${student.id}"></td>
-            <td th:text="${student.name}"></td>
-            <td th:text="${student.gender ? 'Male' : 'Female'}"></td>
-            <td th:text="${student.score}"></td>
+            <td th:text="${student.mssv}"></td>
+            <td th:text="${student.hoTen}"></td>
+            <td th:text="${student.gioiTinh ? 'Male' : 'Female'}"></td>
+            <td th:text="${student.diemTB}"></td>
         </tr>
         </tbody>
     </table>
