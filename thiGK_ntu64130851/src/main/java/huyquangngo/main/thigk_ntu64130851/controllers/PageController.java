@@ -4,6 +4,8 @@ import huyquangngo.main.thigk_ntu64130851.models.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
@@ -19,7 +21,7 @@ public class PageController {
         gioiTinh.addAttribute("gioiTinh", "Nam");
         return "index";
     }
-    @GetMapping("/list")
+    @GetMapping("/List")
     public String pageList(ModelMap m){
         List<Page> pageList = new ArrayList<>();
         pageList.add(new Page("1L", "Facebook", "social", "Trang cá nhân", "2L"));
@@ -32,6 +34,21 @@ public class PageController {
         pageList.add(new Page("8L", "Amazon", "shopping", "Trang thương mại điện tử", null));
         pageList.add(new Page("9L", "Reddit", "forum", "Diễn đàn thảo luận", null));
         pageList.add(new Page("10L", "Netflix", "streaming", "Dịch vụ xem phim trực tuyến", null));
+        m.addAttribute("pageList",pageList);
         return "List";
     }
+    // Hiển thị form thêm mới trang
+    @GetMapping("/add")
+    public String showAddPageForm(ModelMap model) {
+        model.addAttribute("page", new Page("", "", "", "", ""));
+        return "page-add";
+    }
+
+    // Xử lý thêm trang mới
+    @PostMapping("/add")
+    public String addPage(@ModelAttribute Page newPage) {
+        pageList.add(newPage);
+        return "redirect:/page/list";
+    }
+
 }

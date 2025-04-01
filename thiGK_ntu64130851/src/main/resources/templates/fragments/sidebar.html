@@ -14,7 +14,7 @@
 
   <!-- Nav Item - Dashboard -->
   <li class="nav-item active">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" th:href="@{/}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Dashboard</span></a>
   </li>
@@ -27,16 +27,16 @@
     Page
   </div>
 
-  <!-- Nav Item - Charts -->
+
   <li class="nav-item">
-    <a class="nav-link" href="charts.html">
+    <a class="nav-link" th:href="@{/List}">
       <i class="fas fa-fw fa-chart-area"></i>
       <span>List</span></a>
   </li>
 
-  <!-- Nav Item - Tables -->
-  <li class="nav-item">
-    <a class="nav-link" href="tables.html">
+
+  <li class="nav-item" th:href="@{/List}">
+    <a class="nav-link" >
       <i class="fas fa-fw fa-table"></i>
       <span>Add New</span></a>
   </li>
@@ -49,7 +49,7 @@
     Post
   </div>
   <li class="nav-item">
-    <a class="nav-link" href="charts.html">
+    <a class="nav-link" th:href="@{/postList}">
       <i class="fas fa-fw fa-chart-area"></i>
       <span>List</span></a>
   </li>
