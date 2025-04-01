@@ -8,5 +8,5 @@ public class Page {
     private String pageName;
     private String keyword;
     private String content;
-    private String categoryID;
+    private String ParentPageId;
 }
