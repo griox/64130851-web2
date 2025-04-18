@@ -21,9 +21,10 @@ public class PageController {
         gioiTinh.addAttribute("gioiTinh", "Nam");
         return "index";
     }
+    List<Page> pageList = new ArrayList<>();
     @GetMapping("/List")
     public String pageList(ModelMap m){
-        List<Page> pageList = new ArrayList<>();
+
         pageList.add(new Page("1L", "Facebook", "social", "Trang cá nhân", "2L"));
         pageList.add(new Page("2L", "Google", "search", "Công cụ tìm kiếm", null));
         pageList.add(new Page("3L", "YouTube", "video", "Trang chia sẻ video", "2L"));

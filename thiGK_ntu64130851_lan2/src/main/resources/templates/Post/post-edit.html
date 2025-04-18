@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉnh sửa Page</title>
+
+    <!-- Fonts & styles -->
+    <link th:href="@{/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/sb-admin-2.min.css}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+</head>
+<body id="page-top">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div th:replace="fragments/sidebar"></div>
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <div th:replace="fragments/topbar"></div>
+
+            <!-- Page Content -->
+            <div class="container mt-4">
+                <h2 class="mb-4">Chỉnh sửa Page</h2>
+
+                <form th:action="@{/post/update}" th:object="${page}" method="post" class="card p-4 shadow-sm">
+
+                    <div class="mb-3">
+                        <label for="id" class="form-label">ID</label>
+                        <input type="text" th:field="*{id}" id="id" class="form-control" readonly>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pageName" class="form-label">Tiêu đề</label>
+                        <input type="text" th:field="*{title}" id="pageName" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="keyword" class="form-label">Nội dung</label>
+                        <input type="text" th:field="*{content}" id="keyword" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="content" class="form-label">Category Id</label>
+                        <textarea th:field="*{categoryId}" id="contentPage" class="form-control" rows="3"></textarea>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a th:href="@{/postList}" class="btn btn-secondary">Quay lại</a>
+                        <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Footer -->
+            <div th:replace="fragments/footer"></div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script th:src="@{/vendor/jquery/jquery.min.js}"></script>
+<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/vendor/jquery-easing/jquery.easing.min.js}"></script>
+<script th:src="@{/js/sb-admin-2.min.js}"></script>
+
+</body>
+</html>
