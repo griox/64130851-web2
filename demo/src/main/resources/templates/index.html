@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Danh sách sinh viên</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    table {
+      width: 60%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #bdc3c7;
+      text-align: center;
+    }
+    th {
+      background-color: #3498db;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #ecf0f1;
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align: center;">Danh sách sinh viên</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Tên sinh viên</th>
+    <th>Tuổi</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="student : ${students}">
+    <td th:text="${student.id}">1</td>
+    <td th:text="${student.name}">Nguyen Van A</td>
+    <td th:text="${student.age}">20</td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
